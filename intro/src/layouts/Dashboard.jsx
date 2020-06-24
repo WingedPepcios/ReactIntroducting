@@ -4,6 +4,7 @@ import Content from '../modules/Content';
 import Footer from '../modules/Footer';
 import Image from '../atoms/Image';
 import { Josephe } from '../data/images';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Dashboard = () => {
   return (
