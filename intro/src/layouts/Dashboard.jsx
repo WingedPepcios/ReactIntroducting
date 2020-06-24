@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../modules/Header';
+import Menu from '../modules/Menu/Menu'
 import Content from '../modules/Content';
 import Footer from '../modules/Footer';
 import Image from '../atoms/Image';
@@ -15,6 +16,7 @@ const Dashboard = () => {
       <Header>
         <Image src={Josephe.link} alt={Josephe.alt} />
       </Header>
+      <Menu />
       <Settings />
       <Content />
       <Footer />
