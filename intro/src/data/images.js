@@ -1,4 +1,4 @@
 export const Josephe = {
-  link: 'https://winged.pl/images/jaco_1591223726902.png',
+  link: 'https://winged.pl/static/media/logo.4d91bd45.png',
   alt: 'Józek to spoko developer :D',
 };
