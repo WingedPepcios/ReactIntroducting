@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import useCounter from './Counter';
 import Button from '../atoms/Button';
+import User from "./User";
 
 // HoC
 const Content = () => {
@@ -24,8 +25,14 @@ const Content = () => {
 
   return (
     <div>
-      <div>{count} {plur}</div>
-      <Button onClick={() => setDupa((state) => state + 1)}>Klik</Button>
+      {/*<div>{count} {plur}</div>*/}
+      {/*<Button onClick={() => setDupa((state) => state + 1)}>Klik</Button>*/}
+      <User defaultUserData={{
+          userName: "Jasiu Stasiu",
+          userEmail: "jasiu@stasiu.pl",
+          userAvatar: "jasiu.png",
+          userRole: "Head of Jasiu Stasiu",
+      }}></User>
     </div>
   )
 }
