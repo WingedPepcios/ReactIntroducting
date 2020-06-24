@@ -5,6 +5,8 @@ import Footer from '../modules/Footer';
 import Image from '../atoms/Image';
 import { Josephe } from '../data/images';
 
+import '../styles.scss';
+
 const Dashboard = () => {
   return (
     <>
