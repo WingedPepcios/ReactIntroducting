@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { ThemeProvider } from './contexts/Theme';
 import Dashboard from './layouts/Dashboard';
 
+
 ReactDOM.render(
-  <Dashboard />,
-  document.getElementById('App')
+  <ThemeProvider>
+    <Dashboard />
+  </ThemeProvider>,
+  document.getElementById('App'),
 );

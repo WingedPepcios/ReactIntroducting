@@ -1,12 +1,15 @@
-import React from 'react';
-
-import '../styles.scss';
-import Content from '../modules/Content';
+import React, { useContext } from 'react';
+import ThemeButton from '../atoms/ThemeButton';
+import { Theme } from '../contexts/Theme';
 
 const Dashboard = () => {
+  const { changeTheme } = useContext(Theme);
   return (
     <>
-      <Content />
+      <ThemeButton />
+
+      <button type="button" onClick={() => changeTheme('light')}>Change to light</button>
+      <button type="button" onClick={() => changeTheme('dark')}>Darkness</button>
     </>
   );
 };
