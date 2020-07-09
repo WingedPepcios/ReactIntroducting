@@ -1,18 +1,19 @@
 import React from 'react';
 import Logo from '../atoms/Logo';
 
-import { Josephe } from '../data/images';
-import Image from '../data/Image';
+import { LogoImageData } from '../data/images';
+import Image from '../atoms/Image';
+import Navigation from "./Navigation";
 
 const Header = () => {
-  const returnImage = () => <Image src={Josephe.link} alt={Josephe.alt} />
 
   return (
-    <div>
-      <Logo someProps="dupa" children={returnImage}>
-         // children
+    <header>
+      <Logo>
+          <Image src={LogoImageData.link} alt={LogoImageData.alt} />
       </Logo>
-    </div>
+        <Navigation/>
+    </header>
   );
 };
 

@@ -1,4 +1,4 @@
-export const Josephe = {
-  link: 'https://winged.pl/static/media/logo.4d91bd45.png',
-  alt: 'Józek to spoko developer :D',
+export const LogoImageData = {
+  link: 'logo192.png',
+  alt: 'Blog Logo',
 };
