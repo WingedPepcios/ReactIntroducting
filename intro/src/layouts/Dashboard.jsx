@@ -1,28 +1,30 @@
-import React, { useContext, useEffect } from 'react';
-import ThemeButton from '../atoms/ThemeButton';
-import { Theme } from '../contexts/Theme';
+import React from 'react';
+
+import { ThemeProvider } from '../contexts/newTheme';
+import Header from '../modules/Header';
+import { Form } from '../contexts/Form';
+
 import { http } from '../utils/http';
+import { useEffect } from 'react';
 
 const Dashboard = () => {
-  const { changeTheme } = useContext(Theme);
-  
   useEffect(
     () => {
       const getData = async () => {
-        const res = await http.get('https://swapi.dev/api/people/1');
+        const res = await http.get('https://jsonplaceholder.typicode.com/todos/1');
         console.log(res);
-      }
+      };
       getData();
     },
     [],
-  )
-
+  );
   return (
     <>
-      <ThemeButton />
-
-      <button type="button" onClick={() => changeTheme('light')}>Change to light</button>
-      <button type="button" onClick={() => changeTheme('dark')}>Darkness</button>
+      <ThemeProvider>
+        <Form>
+          <Header />
+        </Form>
+      </ThemeProvider>
     </>
   );
 };
