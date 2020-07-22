@@ -5,6 +5,7 @@ import { http } from '../utils/http';
 import Header from "../modules/Header";
 import Content from "../modules/Content";
 import Footer from "../modules/Footer";
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const Dashboard = () => {
   const { changeTheme } = useContext(Theme);
