@@ -1,0 +1,26 @@
+{
+  "name": "szkolonko",
+  "version": "1.0.0",
+  "description": "Od tej pory każdy tworzy swoją aplikację która będzie miała na celu stworzenie w pełni działającego panelu użytkownika. Do stworzenia aplikacji będziesz wykorzystywać zdobytą wiedzę ze spotkań, a następnie około 1-1.5 godziny zostanie na kodowanie pod okiem mentora. Wygląd aplikacji, funkcje dodatkowe i sam schemat działania aplikacji jest twoją inwencją twórczą. W przypadku problemów, lub braku pomysłu, możesz spytać mentora :)",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "concurrently \"npm run index.js\" \"npm run start --prefix intro\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WingedPepcios/ReactIntroducting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WingedPepcios/ReactIntroducting/issues"
+  },
+  "homepage": "https://github.com/WingedPepcios/ReactIntroducting#readme"
+}

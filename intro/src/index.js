@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { ThemeProvider } from './contexts/Theme';
-import Dashboard from './layouts/Dashboard';
+import App from './App';
 
 
 ReactDOM.render(
   <ThemeProvider>
-    <Dashboard />
+    <App />
   </ThemeProvider>,
   document.getElementById('App'),
 );

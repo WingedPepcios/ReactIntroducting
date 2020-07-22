@@ -14,6 +14,7 @@ Tworzymy apliakcję która pozwoli userowi pisać teksty na bloga. Teksty będą
 Przykładowy schemat shorthandu:
 ``` js
 {{image src="/path/image.png"}}
+{{line height="3"}}
 ```
 
 ### Założenia panelu użytkownika:
