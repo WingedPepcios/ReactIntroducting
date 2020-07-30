@@ -1,41 +1,34 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 
 const defaultValues = {
   backgroundColor: '#333',
   textColor: '#fff',
 }
+const lightValues = {
+  backgroundColor: '#e0e0e0',
+  textColor: '#333',
+}
 
 export const Theme = React.createContext();
 
+const reducer = (state, action) => {
+  const { type } = action;
+  switch (type) {
+    case 'DARK':
+      return defaultValues;
+    case 'LIGHT':
+      return lightValues;
+    default:
+      return state;
+  }
+}
+
 // Wytłumaczyć problem z rerenderingiem naprzykładzie z useCallback
 export const ThemeProvider = ({ children }) => {
-  const [providerValue, setProviderValue] = useState(defaultValues);
-
-  const changeTheme = (color) => {
-    switch (color) {
-      case 'light': {
-        setProviderValue(
-          {
-            backgroundColor: '#f0f0f0',
-            textColor: '#333',
-          }
-        );
-        break;
-      }
-      default: {
-        setProviderValue(
-          {
-            backgroundColor: '#333',
-            textColor: '#fff',
-          }
-        );
-        break;
-      }
-    }
-  }
+  const [providerValue, setProviderValue] = useReducer(reducer, defaultValues);
 
   return (
-    <Theme.Provider value={{ ...providerValue, changeTheme }}>
+    <Theme.Provider value={{ ...providerValue, setProviderValue }}>
       {children}
     </Theme.Provider>
   )

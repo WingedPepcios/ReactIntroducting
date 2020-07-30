@@ -10,11 +10,23 @@ const useEmailInput = () => {
     return re.test(String(email).toLowerCase());
   }
 
-  useEffect(() => {
-    if (val) {
-      setIsValid(validEmail(val));
-    }
-  }, [val]);
+  useEffect(
+    () => {
+      const timer = setTimeout(
+        () => {
+          if (val) {
+            setIsValid(validEmail(val));
+          }
+        },
+        500,
+      );
+
+      return () => {
+        clearTimeout(timer);
+      }
+    },
+    [val]
+  );
 
   const struct = (
     <div className="f-group">

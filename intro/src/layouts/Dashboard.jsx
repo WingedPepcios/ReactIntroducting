@@ -6,6 +6,7 @@ import { Form } from '../contexts/Form';
 
 import { http } from '../utils/http';
 import { useEffect } from 'react';
+import { Counter } from '../modules/Counter';
 
 const Dashboard = () => {
   useEffect(
@@ -23,6 +24,7 @@ const Dashboard = () => {
       <ThemeProvider>
         <Form>
           <Header />
+          <Counter />
         </Form>
       </ThemeProvider>
     </>
